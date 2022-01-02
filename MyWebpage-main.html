@@ -1,0 +1,138 @@
+<html>
+<head>
+    <title>My Webpage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body 
+        {
+            font-family: "Lato", sans-serif;
+            transition: background-color .5s;
+        }
+
+        .sidenav
+        {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a 
+        {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover 
+        {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn 
+        {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main 
+        {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+
+        @media screen and (max-height: 450px) 
+        {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+
+        .info
+        {
+            background-color: steelblue;
+            color: black;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+            text-align: center; 
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .myDiv 
+        {
+            position:fixed;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            width:30em;
+            height:20em;
+            margin-top: -9em; /*set to a negative number 1/2 of your height*/
+            margin-left: -15em; /*set to a negative number 1/2 of your width*/
+            border: 5px outset red;
+            background-color: Dodgerblue;
+        }
+
+        span 
+        {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+        }
+    </style>
+</head>
+
+<body style="background-color: mintcream;"> 
+
+	<div class="myDiv">
+		<span>
+            <h1 style="font-family: 'Courier New', Courier, monospace;"><b>Hi, I'm 
+            <i style="font-family:'Brush Script MT',cursive;">Noel</i></b> 
+            </h1>
+            <img src="stockPerson.jfif">
+        </span>    
+	</div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times; </a>
+        <a href="aboutme.html" target="_blank">About Me</a>
+        <a href="marks.html" target="_blank">Marks</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="incomplete.html" target="_blank">Know More</a>
+    </div>
+
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>    
+        <h2>My Webpage</h2>
+        <p> My website, made by implementing HTML, CSS and javascript.</p>
+    </div>
+
+    <script>
+        function openNav() 
+        {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() 
+        {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+   
+</body>
+</html>
